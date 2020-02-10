@@ -1,0 +1,76 @@
+{
+	"name": "vuetify-vscode",
+	"displayName": "vuetify-vscode",
+	"author": "Vuetifyjs",
+	"icon": "img/logo.png",
+	"description": "Vuetify vscode extension",
+	"license": "MIT",
+	"version": "0.2.0",
+	"publisher": "vuetifyjs",
+	"galleryBanner": {
+		"color": "#1E88E5",
+		"theme": "dark"
+	},
+	"keywords": [
+		"vuetify",
+		"vuetifyjs",
+		"vuetify autocomplete",
+		"vuetify-vscode",
+		"vue"
+	],
+	"engines": {
+		"vscode": "^1.5.0"
+	},
+	"repository": {
+		"url": "https://github.com/vuetifyjs/vuetify-vscode"
+	},
+	"homepage": "https://github.com/vuetifyjs/vuetify-vscode",
+	"bugs": {
+		"url": "https://github.com/vuetifyjs/vuetify-vscode/issues"
+	},
+	"categories": [
+		"Snippets",
+		"Other"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "vue",
+				"path": "./snippets/vuetify.json"
+			},
+			{
+				"language": "vue",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/vuetify.json"
+			},
+			{
+				"language": "vue-html",
+				"path": "./snippets/vuetify.json"
+			},
+			{
+				"language": "jade",
+				"path": "./snippets/vuetify.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "a0a6c52d-6418-4b3b-b7a2-3323b1ec8635",
+		"publisherId": "cd669fa6-bb05-4cde-89ec-9f8c94fbb63e",
+		"publisherDisplayName": "Vuetifyjs"
+	}
+}

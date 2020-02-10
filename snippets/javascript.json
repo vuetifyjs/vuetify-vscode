@@ -1,0 +1,107 @@
+{
+  "Vuetify import": {
+    "prefix": "vImport",
+    "body": [
+      "import Vuetify from 'vuetify'"
+    ],
+    "description": "Vuetify import"
+  },
+  "Vuetify css import": {
+    "prefix": "vImportCss",
+    "body": [
+      "import 'vuetify/dist/vuetify.min.css'"
+    ],
+    "description": "Vuetify css import"
+  },
+  "babel-polyfill": {
+    "prefix": "bablePolyfillImport",
+    "body": [
+      "import 'babel-polyfill'"
+    ],
+    "description": "Import babel-polyfill"
+  },
+  "Define new theme": {
+    "prefix": "vThemeCreate",
+    "body": [
+      "// Helpers",
+      "import colors from 'vuetify/es5/util/colors'",
+      "",
+      "Vue.use(Vuetify, {",
+      "\ttheme: {",
+      "\t\tprimary: colors.${1|red,pink,purple,deep-purple,indigo,blue,light-blue,cyan,teal,green,light-green,lime,yellow,amber,orange,deep-orange,brown,blue-grey,grey|}.${2|base,lighten5,lighten4,lighten3,lighten2,lighten1,darken1,darken2,darken3,darken4,accent1,accent2,accent3,accent4|},",
+      "\t\tsecondary: colors.${3|red,pink,purple,deep-purple,indigo,blue,light-blue,cyan,teal,green,light-green,lime,yellow,amber,orange,deep-orange,brown,blue-grey,grey|}.${4|base,lighten5,lighten4,lighten3,lighten2,lighten1,darken1,darken2,darken3,darken4,accent1,accent2,accent3,accent4|},",
+      "\t\taccent: colors.${5|red,pink,purple,deep-purple,indigo,blue,light-blue,cyan,teal,green,light-green,lime,yellow,amber,orange,deep-orange,brown,blue-grey,grey|}.${6|base,lighten5,lighten4,lighten3,lighten2,lighten1,darken1,darken2,darken3,darken4,accent1,accent2,accent3,accent4|},",
+      "\t\terror: colors.${7|red,pink,purple,deep-purple,indigo,blue,light-blue,cyan,teal,green,light-green,lime,yellow,amber,orange,deep-orange,brown,blue-grey,grey|}.${8|base,lighten5,lighten4,lighten3,lighten2,lighten1,darken1,darken2,darken3,darken4,accent1,accent2,accent3,accent4|}",
+      "\t}",
+      "})$0"
+    ],
+    "description": "Define new theme - Vuetify"
+  },
+  "Theme minification": {
+    "prefix": "vThemeMinification",
+    "body": [
+      "Vue.use(Vuetify, {",
+      "\toptions: {",
+      "\t\tminifyTheme: function () {",
+      "\t\t\treturn process.env.NODE_ENV === 'production'",
+      "\t\t\t\t? val.replace(/[\\s|\r\n|\r|\n]/g, '')",
+      "\t\t\t\t: null",
+      "\t\t}",
+      "\t}",
+      "})$0"
+    ],
+    "description": "Theme minification - Vuetify"
+  },
+  "Theme caching": {
+    "prefix": "vThemeCaching",
+    "body": [
+      "const themeCache = LRU({",
+      "\tmax: 10,",
+      "\tmaxAge: 1000 * 60 * 60 // 1 hour",
+      "})",
+      "",
+      "Vue.use(Vuetify, {",
+      "\toptions: {",
+      "\t\tthemeCache",
+      "\t}",
+      "})$0"
+    ],
+    "description": "Theme caching - Vuetify"
+  },
+  "v-form email rule": {
+    "prefix": "vFormEmailRules",
+    "body": [
+      "emailRules: [",
+      "\tv => !!v || 'E-mail is required',",
+      "\tv => /^\\w+([.-]?\\w+)*@\\w+([.-]?\\w+)*(\\.\\w{2,3})+$/.test(v) || 'E-mail must be valid'",
+      "]$0"
+    ],
+    "description": "v-form email rule - Vuetify"
+  },
+  "v-form name rule": {
+    "prefix": "vFormNameRule",
+    "body": [
+      "nameRules: [",
+      "\tv => !!v || 'Name is required',",
+      "\tv => v.length <= 10 || 'Name must be less than 10 characters'",
+      "]$0"
+    ],
+    "description": "v-form name rule - Vuetify"
+  },
+  "Breakpoing object of Grid system": {
+    "prefix": "vGridBreakpointObject",
+    "body": [
+      "breakpointObject() {",
+      "\t// Use in computed property",
+      "\tswitch (this.$vuetify.breakpoint.name) {",
+      "\t\tcase 'xs': return '220px'",
+      "\t\tcase 'sm': return '400px'",
+      "\t\tcase 'md': return '500px'",
+      "\t\tcase 'lg': return '600px'",
+      "\t\tcase 'xl': return '800px'",
+      "\t}",
+      "}"
+    ],
+    "description": "Breakpoing object of Grid system - Vuetify"
+  }
+}
