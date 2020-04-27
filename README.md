@@ -1,4 +1,4 @@
-# WORK IN PROGRESS
+# DEPRECATED, USE [VETUR](https://marketplace.visualstudio.com/items?itemName=octref.vetur) INSTEAD
 
 <p align="center">
   <img height="130px"
