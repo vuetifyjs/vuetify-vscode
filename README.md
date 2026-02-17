@@ -1,4 +1,5 @@
-# DEPRECATED, USE [VETUR](https://marketplace.visualstudio.com/items?itemName=octref.vetur) INSTEAD
+# ~~DEPRECATED, USE [VETUR](https://marketplace.visualstudio.com/items?itemName=octref.vetur) INSTEAD~~
+# New version coming soon
 
 <p align="center">
   <img height="130px"
